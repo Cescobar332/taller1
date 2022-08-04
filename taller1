@@ -1,0 +1,52 @@
+A = set()
+B = set()
+C = set()
+def Union():
+    C=A+B
+
+def Interseccion():
+    for e in A:
+        if e in B:
+            C.add(e)
+    print(C)
+
+def Diferencia():
+    C=A-B
+
+def DifSim():
+    C=A-B
+
+print("Por favor escriba usted dos conjuntos")
+print("De cuántos números será el conjunto A?")
+i=0
+x=int(input())
+print("Escriba el conjunto A número por número: ")
+while i < x:
+    A.add(float(input()))
+    i=i+1
+
+print("De cuántos números será el conjunto B?")
+j=0
+z=int(input())
+print("Escriba el conjunto B número por número: ")
+while j < z:
+    B.add(float(input()))
+    j=j+1
+
+print("Qué operación desea realizar entre los conjuntos?")
+print("1. Unión")
+print("2. Intersección")
+print("3. Diferencia")
+print("4. Diferencia simétrica")
+
+op=input()
+if op == "1":
+    Union()
+elif op == "2":
+    Interseccion()
+elif op == "3":
+    Diferencia()
+elif op == "4":
+    DifSim()
+
+print("El cardinal del conjunto A: ", len(A), ", el cardinal del conjunto B: ", len(B))
